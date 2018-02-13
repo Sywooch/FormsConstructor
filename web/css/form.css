@@ -1,0 +1,372 @@
+.formpage {
+	display: block;
+	position: absolute;
+	width: 100%;
+	min-height: 100%;
+	height: auto;
+	background: #f5f5f5;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+.constructor-wrap .formpage {
+	margin: -20px -15px;
+	min-height: calc(100% - (50px + 50px));
+	height: calc(100% - (50px + 50px));
+}
+.form-wrap .formpage {
+	min-height: calc(100% - 50px);
+	height: calc(100% - 50px);
+}
+
+.form-wrapper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow-x: auto;
+	overflow-y: scroll;
+	transition: margin .25s ease-in-out, width .25s ease-in-out;
+}
+
+.form-pages {
+	display: block;
+	padding: 0px;
+}
+.form-page {
+	display: block;
+	box-sizing: border-box;
+	margin: 15px auto;
+	padding: 15px;
+	background: #fff;
+	box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+}
+.iframe .form-page {
+	margin: 0px auto;
+}
+.use-mode .form-page {
+	display: none;
+}
+.use-mode .form-page.active {
+	display: block;
+}
+
+.form-pages .alert {
+	margin-top: 20px;
+}
+
+.form-controls-pagelist {
+	margin-top: 15px;
+	padding: 0px 50px;
+}
+.form-controls-pagelist .nav {
+	display: inline-block;
+}
+.form-controls-pagelist .nav li a {
+	cursor: move;
+}
+
+.form-controls-form-save {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	text-align: right;
+	z-index: 1000;
+}
+
+.form-controls-show-btn {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	width: 50px;
+	height: 50px;
+	font-size: 30px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 50%;
+	color: #333;
+}
+.form-controls-show-btn .glyphicon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.form-controls-show-btn:hover {
+	background: #333;
+	color: #fff;
+}
+.form-controls-show-btn.formparams-show-btn {
+	left: auto;
+	right: 15px;
+}
+.form-controls-show-btn.formsettings-show-btn {
+	top: 80px;
+	left: auto;
+	right: 15px;
+}
+.form-controls-show-btn.formpublish-show-btn {
+	top: 145px;
+	left: auto;
+	right: 15px;
+}
+
+.form-controls {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	width: 300px;
+	height: 100%;
+	background: #222;
+	transition: transform .25s ease-in-out;
+	color: #fff;
+	padding: 15px;
+	z-index: 100;
+}
+.form-controls.right-controls {
+	left: auto;
+	right: 0px;
+	border-left: 1px solid #080808;
+	transform: translateX(300px);
+}
+.form-controls.left-controls {
+	border-right: 1px solid #080808;
+	transform: translateX(-300px);
+}
+.form-controls.opened-controls {
+	transform: translateX(0px);
+}
+.form-controls h4 {
+	margin-top: 4px;
+}
+.form-controls .close {
+	position: absolute;
+	font-size: 26px;
+	top: 15px;
+	right: 15px;
+	color: #fff;
+	opacity: .75;
+	outline: none;
+	transition: opacity .2s ease-in-out;
+}
+.form-controls .close:hover, 
+.form-controls .close:focus {
+	color: #fff;
+	opacity: 1;
+}
+.form-controls-page {
+    overflow-y: auto;
+}
+.left-controls .form-controls-page {
+	height: calc(100% - 20px);
+}
+.right-controls .form-controls-page {
+	height: calc(100% - 80px);
+	margin-bottom: 15px;
+}
+
+.form-controls-element a {
+	background: transparent;
+	text-align: left;
+	color: #fff;
+	border: 0px;
+	border-radius: 0px;
+	font-size: 18px;
+}
+.form-controls-element a:active,
+.form-controls-element a:focus {
+	background: transparent;
+	color: #fff;
+}
+.form-controls-element a:hover {
+	background: #e6e6e6;
+	color: #333;
+}
+
+.construct-mode .form-element-wrapper {
+	cursor: move;
+}
+.form-element-group {
+	position: relative;
+	width: 100%;
+}
+.construct-mode .form-element-group:hover,
+.construct-mode .form-element-group.selected {
+	box-shadow: 0 0 0 2px #ff0;
+}
+.form-element-group .form-element-controls {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: calc(100% + 15px);
+	width: 30px;
+	min-height: 55px;
+	height: 100%;
+	padding: 5px;
+	background: #333;
+	color: #fff;
+	font-size: 18px;
+	transform: translateY(-50%);
+}
+.form-element-controls {
+	text-align: center;
+}
+.form-element-group.selected .form-element-controls {
+	display: block;
+}
+.form-element-controls .element-controls-btn {
+	cursor: pointer;
+	opacity: 0.75;
+}
+.form-element-controls .element-controls-btn:hover {
+	opacity: 1;
+}
+
+.drop-file-block {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	border: 2px dashed #ddd;
+}
+.drop-file-block .upload-btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.drop-file-block .upload-progress-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	background: #eee;
+}
+
+.image-browse-block {
+	position: relative;
+	height: 200px;
+	overflow-y: auto;
+}
+.image-browse-block a.image-link {
+	height: 100px;
+}
+.image-browse-block a.image-link:hover {
+	background: #eee;
+}
+.image-browse-block a.image-link.active {
+	background: #ddd;
+}
+.image-browse-block img {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.form-settings {
+	visibility: hidden;
+	position: absolute;
+	width: 100%;
+	height: 0;
+	background: #f5f5f5;
+	opacity: 0;
+	transition: opacity .25s ease-in-out, height .25s ease-in-out, visibility 0s linear .25s;
+	z-index: 500;
+}
+.form-settings.active {
+	visibility: visible;
+	opacity: 1;
+	height: 100%;
+	transition-delay: 0s;
+}
+.form-settings .close {
+	position: absolute;
+	font-size: 26px;
+	top: 15px;
+	right: 15px;
+	opacity: .75;
+	outline: none;
+	transition: opacity .2s ease-in-out;
+}
+.form-settings .close:hover, 
+.form-settings .close:focus {
+	opacity: 1;
+}
+.form-settings-wrapper {
+	width: 100%;
+	height: 100%;
+	padding: 20px 15px;
+	overflow: auto;
+}
+.form-settings-wrapper.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.form-settings-page .panel .form-group:last-child {
+	margin-bottom: 0px;
+}
+
+.help-block.form-param-help {
+	margin-bottom: 0px;
+}
+
+/* FORM ELEMENTS */
+.construct-mode .form-element-group label, 
+.construct-mode .form-element-group button,
+.construct-mode .form-element-group input,
+.construct-mode .form-element-group textarea,
+.construct-mode .form-element-group select {
+	pointer-events: none;
+}
+
+.form-inline .radio,
+.form-inline .checkbox {
+	display: block !important;
+	margin-top: 0px !important;
+	margin-bottom: 0px;
+	vertical-align: middle;
+}
+.form-inline .radio label, 
+.form-inline .checkbox label {
+	padding-left: 0px;
+}
+.form-inline .radio input[type="radio"], 
+.form-inline .checkbox input[type="checkbox"] {
+	position: relative;
+    margin-left: 0;
+}
+
+.form-inline .form-element-group {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.form-inline .form-element-group .form-control {
+	width: auto;
+	display: inline-block;
+	vertical-align: middle;
+}
+.form-inline .form-element-group .control-label {
+	vertical-align: middle;
+	margin-bottom: 0px;
+}
+.form-inline .form-element-group .form-group {
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: 0px;
+}
+
+.form-element-group .form-inline .form-control {
+	margin-right: 15px;
+}
+
+.form-element-group .help-block {
+	margin-bottom: 0px;
+}
+
+.form-element-header {
+	margin-top: 0px;
+}

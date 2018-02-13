@@ -1,0 +1,12 @@
+php_value short_open_tag 1
+
+Options +FollowSymLinks -Indexes
+
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{REQUEST_URI} ^(.*)$
+RewriteRule ^(.*)$ web/$1

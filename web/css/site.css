@@ -1,0 +1,322 @@
+html,
+body {
+    height: 100%;
+}
+
+*.strong {
+	font-weight: bold;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -50px;
+    padding: 0 0 50px;
+}
+
+.wrap.constructor-wrap {
+	background: #f5f5f5;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.wrap.form-wrap > .container {
+	padding: 0px;
+}
+
+.wrap > .container.fullwidth {
+    width: 100%;
+}
+
+.wrap > .container .content-block {
+	background: #fff;
+	box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.footer {
+    height: 50px;
+    background-color: #222;
+    border-top: 1px solid #080808;
+    padding-top: 15px;
+	color: #999;
+}
+
+.footer .copy-info {
+	display: inline-block;
+}
+
+.footer a {
+	color: #999;
+	text-decoration: none;
+}
+.footer a:hover {
+	color: #fff;
+}
+
+.navbar .dropdown-menu li img,
+.navbar .dropdown-menu li .glyphicon {
+	margin-right: 20px;
+}
+
+.navbar-inverse .dropdown-menu {
+	background-color: #222;
+	border-color: #080808;
+}
+.navbar-inverse .dropdown-menu a {
+	color: #999;
+} 
+.navbar-inverse .dropdown-menu li a:hover,
+.navbar-inverse .dropdown-menu li a:focus,
+.navbar-inverse .dropdown-menu li.active a {
+	color: #fff;
+	background-color: #000;
+	text-decoration: none;
+	outline: none;
+}
+.navbar-inverse .dropdown-menu .divider {
+	background-color: #000;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+.breadcrumb > .active .btn {
+	color: #777;
+	opacity: 1;
+}
+
+.btn-group .dropdown-menu .glyphicon {
+	margin-right: 10px;
+} 
+
+.glyphicon.glyphicon-btn-loading {
+    animation: spin 5s infinite linear;
+}
+ 
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+
+.loader {
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.75);
+	z-index: 1000;
+}
+.loader::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	max-width: 64px;
+	max-height: 64px;
+	background: url('../img/loading.gif') 50% 50% no-repeat;
+	background-size: contain; 
+}
+
+.tab-content {
+	padding: 15px;
+}
+
+/* formsbrowser */
+.fb {
+	position: relative;
+}
+
+.fb .fb-controls {
+	margin-bottom: 15px;
+}
+
+.fb .fb-folder,
+.fb .fb-form {
+	margin-bottom: 15px;
+	width: 85%;
+	float: left;
+	box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+}
+.fb .fb-folder.fb-listed {
+	margin-bottom: 0px;
+	width: 100%;
+	box-shadow: none;
+	border: 0px;
+	border-radius: 0px;
+}
+.fb-folder .glyphicon {
+	margin-right: 6px;
+}
+.fb-folder.btn-lg .glyphicon {
+	margin-right: 8px;
+}
+.fb-form.fb-form-disabled {
+	opacity: 0.75;
+}
+.fb-form .glyphicon {
+	font-size: 42px;
+}
+.fb-form .badge {
+	position: absolute;
+	top: 10px;
+	right: 16px;
+}
+.fb-folder .btn-text,
+.fb-form .btn-text {
+	overflow-x: hidden;
+}
+.fb-folder .btn-text {
+	text-align: left;
+}
+.fb .fb-folders .fb-folder-dropdown,
+.fb .fb-forms .fb-form-dropdown {
+	width: 15%;
+}
+.fb .fb-folders .fb-folder-dropdown .btn,
+.fb .fb-forms .fb-form-dropdown .btn {
+	box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+}
+.fb .fb-folders .fb-folder-dropdown .dropdown-toggle {
+	padding: 10px 0px;
+}
+.fb .fb-forms .fb-form-dropdown .dropdown-toggle {
+	padding: 34px 0px;
+}
+
+.pattern-list label {
+	margin-left: 10px; 
+	margin-bottom: 10px;
+}
+.pattern-list .pattern-img {
+	width: 150px;
+	height: 158px;
+	margin-top: 5px; 
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.pattern-list .pattern-img img {
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.form-submissions h3,
+.form-stats h3 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.form-submissions {}
+.form-submissions-view {
+	width: 100%;
+	height: 300px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	margin-bottom: 15px;
+}
+.form-submissions-view .control-label {
+	background: #f5f5f5;
+}
+.form-submissions-view .form-group {
+	margin-bottom: 0px;
+}
+.form-submissions-list {
+	position: relative;
+}
+.form-submissions-list .grid-view tr.active {
+	background-color: #f5f5f5;
+}
+.form-submissions-list .grid-view th {
+	text-align: center;
+}
+.form-submissions-list .grid-view td {
+	text-align: center;
+	vertical-align: middle;
+}
+.form-submissions-list .grid-view td.value-cell {
+	/* min-width: 75px; */
+	white-space: nowrap;
+}
+.form-submissions-list .subSetAsRead {
+	opacity: 0.5;
+}
+.form-submissions-list .subSetAsRead.submission-new {
+	opacity: 1;
+}
+
+.form-stats {}
+.form-statistics {
+	height: 300px;
+	width: 100%;
+	margin: 15px auto;
+}
+.form-statistics .legend th,
+.form-statistics .legend td {
+	padding: 3px;
+}
